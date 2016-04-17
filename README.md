@@ -6,18 +6,22 @@ To install dependencies :
 sudo apt-get install git dpkg-dev make g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev python-dev gfortran
 
 Get ROOT : 
+```bash
 cd ~/
 git clone http://root.cern.ch/git/root.git
 cd root
 git checkout -b v6-06-02 v6-06-02
+```
 
 then, on Raspian wheezy : 
-
+```bash
 ./configure --with-x11-libdir=/usr/lib/arm-linux-gnueabihf/ --with-xpm-libdir=/usr/lib/arm-linux-gnueabihf/ --with-xft-libdir=/usr/lib/arm-linux-gnueabihf/ --with-xext-libdir=/usr/lib/arm-linux-gnueabihf/ --enable-http --enable-python
-
+```
 to use root, 
 
+```bash
 source /home/pi/root/bin/thisroot.sh
+```
 
 Requires a working local mySQL database with a table with the fields filled by deamon.py
 
