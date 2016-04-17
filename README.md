@@ -16,6 +16,7 @@ git checkout -b v6-06-02 v6-06-02
 then, on Raspian wheezy : 
 ```bash
 ./configure --with-x11-libdir=/usr/lib/arm-linux-gnueabihf/ --with-xpm-libdir=/usr/lib/arm-linux-gnueabihf/ --with-xft-libdir=/usr/lib/arm-linux-gnueabihf/ --with-xext-libdir=/usr/lib/arm-linux-gnueabihf/ --enable-http --enable-python
+make -j4
 ```
 to use root, 
 
