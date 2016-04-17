@@ -1,7 +1,27 @@
 # AquariumController
 
-Requires ROOT6 : root.cern.ch 
-Requires a mySQL database with a table with the fields filled by deamon.py
+Requires ROOT6 : http://root.cern.ch 
+
+To install dependencies : 
+sudo apt-get install git dpkg-dev make g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev python-dev gfortran
+
+Get ROOT : 
+cd ~/
+git clone http://root.cern.ch/git/root.git
+cd root
+git checkout -b v6-06-02 v6-06-02
+
+then, on Raspian wheezy : 
+
+./configure --with-x11-libdir=/usr/lib/arm-linux-gnueabihf/ --with-xpm-libdir=/usr/lib/arm-linux-gnueabihf/ --with-xft-libdir=/usr/lib/arm-linux-gnueabihf/ --with-xext-libdir=/usr/lib/arm-linux-gnueabihf/ --enable-http --enable-python
+
+to use root, 
+
+source /home/pi/root/bin/thisroot.sh
+
+Requires a working local mySQL database with a table with the fields filled by deamon.py
+
+In this case, AQUARIUMdb is the database and tempdat is the table I created, containing : Date,Time,Comments,Temperature,pH,Relay1,Relay2
 
 
 Aquarium Controller based on raspberry pi 3 B+ with : 
