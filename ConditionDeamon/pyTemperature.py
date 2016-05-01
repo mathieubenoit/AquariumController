@@ -28,6 +28,14 @@ def readtemperature():
         temp_string = lines[1].strip()[temp_output+2:]
         temp_c = float(temp_string) / 1000.0
         return temp_c
+        
+if __name__ == "__main__":
+ 
+	for i in range(100): 
+ 		print readtemperature()
+ 
+ 
+ 
 
 
 
